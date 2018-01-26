@@ -16,8 +16,8 @@ app.get('/', (req, res) => {
 app.get('/processform', (req,res)=>{
     const {user, bio, agree, city} = req.query
     const sendBack = {
-        user: par.user ? user : 'default user',
-        bio: par.bio ? bio : 'Lorem Ipsum goes here.',
+        user: user ? user : 'default user',
+        bio: bio ? bio : 'Lorem Ipsum goes here.',
         agree: agree === 'on' ? 'agreed' : 'disagreed',
         city: city ? city : 'Unknown'
     }
