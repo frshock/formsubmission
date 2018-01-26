@@ -16,8 +16,7 @@ app.get('/processform', (req,res)=>{
         user: par.user ? par.user : 'default user',
         bio: par.bio ? par.bio : 'Lorem Ipsum goes here.',
         agree: par.agree === 'on' ? 'agreed' : 'disagreed',
-        city: par.city ? par.city : 'Unknown',
-        gender: par.gender ? par.gender : 'Not specified'
+        city: par.city ? par.city : 'Unknown'
     }
     res.render('pages/index', {data: sendBack});
 })
