@@ -25,14 +25,15 @@ app.get('/processform', (req,res)=>{
 })
 
 app.post('/processform', (req,res)=>{
-    const {user, bio, agree, city} = req.body
-    const sendBack = {
-        user: user ? user : 'default user',
-        bio: bio ? bio : 'Lorem Ipsum goes here.',
-        agree: agree === 'on' ? 'agreed' : 'disagreed',
-        city: city ? city : 'Unknown'
-    }
-    res.render('pages/index', {data: sendBack, method: 'POST', mechanism: 'body'});
+    // const {user, bio, agree, city} = req.body
+
+    // const sendBack = {
+    //     user: user ? user : 'default user',
+    //     bio: bio ? bio : 'Lorem Ipsum goes here.',
+    //     agree: agree === 'on' ? 'agreed' : 'disagreed',
+    //     city: city ? city : 'Unknown'
+    // }
+    res.render('pages/index', {data: req.body, method: 'POST', mechanism: 'body'});
 })
 
 app.listen(PORT, ()=> console.log('Listening on some port.'))

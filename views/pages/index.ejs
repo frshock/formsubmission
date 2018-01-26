@@ -12,10 +12,9 @@
             <h1 class="text-center">Your Form Data</h1>
             <h2>Your data was sent via the <%= method %>'s methods req.<%= mechanism %> object.</h2>
             <div>
-                <div class="input"><span>The username that you entered was: <%= data.user %></span></div>
-                <div class="input"><span>The Bio you gave was: <%= data.bio %></span></div>
-                <div class="input"><span>You <%= data.agree %>.</span></div>
-                <div class="input"><span>You entered <%= data.city %> as your city.</span></div>
+                <% for(let key in data) { %>
+                  <div class="input"><span>Name: <%= key %> | Value: <%= data[key] %></span></div>
+                <% } %>
             </div>
         </div>
     </body>
