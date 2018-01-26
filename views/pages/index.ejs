@@ -13,7 +13,7 @@
             <h2>Your data was sent via the <%= method %>'s methods req.<%= mechanism %> object.</h2>
             <div>
                 <% for(let key in data) { %>
-                  <div class="input"><span>Name: <%= key %> | Value: <%= data[key] %></span></div>
+                  <div class="input"><span>The name of your input was: <%= key %> | The value you entered was: <%= data[key] %></span></div>
                 <% } %>
             </div>
         </div>
