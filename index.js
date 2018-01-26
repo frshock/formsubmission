@@ -14,14 +14,14 @@ app.get('/', (req, res) => {
 });
 
 app.get('/processform', (req,res)=>{
-    const {user, bio, agree, city} = req.query
-    const sendBack = {
-        user: user ? user : 'default user',
-        bio: bio ? bio : 'Lorem Ipsum goes here.',
-        agree: agree === 'on' ? 'agreed' : 'disagreed',
-        city: city ? city : 'Unknown'
-    }
-    res.render('pages/index', {data: sendBack, method: 'GET', mechanism: 'query'});
+    // const {user, bio, agree, city} = req.query
+    // const sendBack = {
+    //     user: user ? user : 'default user',
+    //     bio: bio ? bio : 'Lorem Ipsum goes here.',
+    //     agree: agree === 'on' ? 'agreed' : 'disagreed',
+    //     city: city ? city : 'Unknown'
+    // }
+    res.render('pages/index', {data: req.query, method: 'GET', mechanism: 'query'});
 })
 
 app.post('/processform', (req,res)=>{
